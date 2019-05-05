@@ -9,8 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 
 class MainActivity : AppCompatActivity() {
-    val wsitename = arrayOf("Choose One","Google","Apple","Microsoft")
-    val wsiteurl = arrayOf("#","https://google.com", "https://apple.com","https://microsoft.com")
+    val wsitename = arrayOf("Choose Website","RVCIOT","Apple","MyRVC")
+    val wsiteurl = arrayOf("#","https://rvciot.app", "https://apple.com","https//myrvc.org")
     var count = 0
 
 
@@ -36,7 +36,9 @@ class MainActivity : AppCompatActivity() {
                     count = 1
                 }else{
                     //putExtra sets value to name SendStuff (Could be called whatever you want
-                    intent.putExtra("SendStuff",wsiteurl[position])
+                    intent.putExtra("website",wsiteurl[position])
+
+                    intent.putExtra("webname",wsitename[position])
                     //Go to second activity
                     startActivity(intent)
                 }
